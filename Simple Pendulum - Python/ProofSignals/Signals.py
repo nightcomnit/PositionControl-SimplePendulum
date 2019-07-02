@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def sinusoidal(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
+def sinusoidal(qd, qr, Amplitude, Frequency, SimulationTime, ConversionValue):
     """
     Sine-wave test function for a simple pendulum given an Amplitude in degrees and a frequency.
 
@@ -12,11 +12,11 @@ def sinusoidal(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
                previously declared with the nifpga library.
     :param qr: Real position of the pendulum given by the programming logic in LabVIEW obtained
                by a rotary encoder and previously declared with the nifpga library.
-    :param Amplitude: Amplitude of the test signal given in degrees
+    :param Amplitude: Amplitude of the test signal given in degrees.
     :param Frequency: Frequency of the test signal with a range of 0 to 1, where for example 0.5
                       would be 50% of the frequency.
-    :param SimulationTime: Simulation Time
-    :param ConversationValue: Conversion value given by the previously performed conversion function
+    :param SimulationTime: Simulation Time.
+    :param ConversionValue: Conversion value given by the previously performed conversion function.
     :return: The function performs a sinusoidal test signal in real time through the nifpga library,
              in addition to the graph where the behavior of the signals can be observed and compared.
     """
@@ -36,11 +36,11 @@ def sinusoidal(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
         SignalSin = Amplitude * np.sin(2 * np.pi * ti[i] * Frequency)
         sin.append(SignalSin)
 
-        qd_degrees2pulses = np.int16(SignalSin * ConversationValue)
+        qd_degrees2pulses = np.int16(SignalSin * ConversionValue)
         qd.write(qd_degrees2pulses)
 
         qr_real = qr.read()
-        qr_data_pulses2degrees = (qr_real / ConversationValue)
+        qr_data_pulses2degrees = (qr_real / ConversionValue)
         qr_data.append(qr_data_pulses2degrees)
 
         i += 1
@@ -57,7 +57,7 @@ def sinusoidal(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
     plt.show()
 
 
-def square(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
+def square(qd, qr, Amplitude, Frequency, SimulationTime, ConversionValue):
     """
     Square-wave test function for a simple pendulum given an Amplitude in degrees and a frequency.
 
@@ -65,11 +65,11 @@ def square(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
                previously declared with the nifpga library.
     :param qr: Real position of the pendulum given by the programming logic in LabVIEW obtained
                by a rotary encoder and previously declared with the nifpga library.
-    :param Amplitude: Amplitude of the test signal given in degrees
+    :param Amplitude: Amplitude of the test signal given in degrees.
     :param Frequency: Frequency of the test signal with a range of 0 to 1, where for example 0.5
                       would be 50% of the frequency.
-    :param SimulationTime: Simulation Time
-    :param ConversationValue: Conversion value given by the previously performed conversion function
+    :param SimulationTime: Simulation Time.
+    :param ConversionValue: Conversion value given by the previously performed conversion function.
     :return: The function performs a square test signal in real time through the nifpga library,
              in addition to the graph where the behavior of the signals can be observed and compared.
     """
@@ -96,11 +96,11 @@ def square(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
 
         sqr.append(Square)
 
-        qd_degrees2pulses = np.int16(Square * ConversationValue)
+        qd_degrees2pulses = np.int16(Square * ConversionValue)
         qd.write(qd_degrees2pulses)
 
         qr_real = qr.read()
-        qr_data_pulses2degrees = (qr_real / ConversationValue)
+        qr_data_pulses2degrees = (qr_real / ConversionValue)
         qr_data.append(qr_data_pulses2degrees)
 
         i += 1
@@ -117,7 +117,7 @@ def square(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
     plt.show()
 
 
-def step(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
+def step(qd, qr, Amplitude, Frequency, SimulationTime, ConversionValue):
     """
     Step-wave test function for a simple pendulum given an Amplitude in degrees and a frequency.
 
@@ -125,11 +125,11 @@ def step(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
                previously declared with the nifpga library.
     :param qr: Real position of the pendulum given by the programming logic in LabVIEW obtained
                by a rotary encoder and previously declared with the nifpga library.
-    :param Amplitude: Amplitude of the test signal given in degrees
+    :param Amplitude: Amplitude of the test signal given in degrees.
     :param Frequency: Frequency of the test signal with a range of 0 to 1, where for example 0.5
                       would be 50% of the frequency.
-    :param SimulationTime: Simulation Time
-    :param ConversationValue: Conversion value given by the previously performed conversion function
+    :param SimulationTime: Simulation Time.
+    :param ConversionValue: Conversion value given by the previously performed conversion function.
     :return: The function performs a step test signal in real time through the nifpga library,
              in addition to the graph where the behavior of the signals can be observed and compared.
     """
@@ -155,11 +155,11 @@ def step(qd, qr, Amplitude, Frequency, SimulationTime, ConversationValue):
 
         stp.append(Step)
 
-        qd_degrees2pulses = np.int16(Step * ConversationValue)
+        qd_degrees2pulses = np.int16(Step * ConversionValue)
         qd.write(qd_degrees2pulses)
 
         qr_real = qr.read()
-        qr_data_pulses2degrees = (qr_real / ConversationValue)
+        qr_data_pulses2degrees = (qr_real / ConversionValue)
         qr_data.append(qr_data_pulses2degrees)
 
         i += 1

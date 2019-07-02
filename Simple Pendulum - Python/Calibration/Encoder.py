@@ -4,7 +4,7 @@ import time
 def calibration(qr, ResetPID, ResetEncoder):
     """
     Function to obtain the calibration value of the pendulum, to be able to manipulate the pulses and
-    degrees conversation.
+    degrees conversion.
 
     :param qr: Encoder reading to obtain the number of pulses equivalent to 90 degrees, previously
                initialized with the nifpga library.
@@ -12,7 +12,7 @@ def calibration(qr, ResetPID, ResetEncoder):
                      previously initialized with the nifpga library.
     :param ResetEncoder: Variable to control the state of the button that reset the encoder count in LabVIEW main,
                          previously initialized with the nifpga library.
-    :return: The function return the conversation value to manipulate the data in pulses or degrees.
+    :return: The function return the conversion value to manipulate the data in pulses or degrees.
     """
     ResetPID.write(True)
     ResetEncoder.write(True)

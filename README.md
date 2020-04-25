@@ -31,7 +31,7 @@ A model was designed in CAD for the structure where the servomotor and circuits 
 
 <center>
   <figure>
-    <img src="images\CAD design back view.jpg?raw=true"
+    <img src="images\CAD design back view.JPG?raw=true"
     alt="Figure 3"
     width="200"
     height="250

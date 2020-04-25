@@ -42,3 +42,15 @@ A model was designed in CAD for the structure where the servomotor and circuits 
 </center>
 
 The programming in LabVIEW is oriented to graphic programming called ["G"](https://wiki.c2.com/?GraphicalProgrammingLanguage), for which the programming was carried out in such a way that the signal of the rotary encoder is received, to know the position in which the axis of the servomotor is located. For this, in the programming logic, a calibration is performed to determine how many number of pulses of the rotary encoder correspond to 0 ° and 90 ° before entering a desired position in degrees. All this was done on a [screen](../master/Documentation/Screen) (Figure 4), using the [LabVIEW PID module](http://www.ni.com/tutorial/6931/en/) to control the position of the axis of the servomotor to which a bar is attached.
+
+<center>
+  <figure>
+    <img src="images\Screen.PNG?raw=true"
+    alt="Figure 3"
+    width="600"
+    height="250
+    ">
+
+  <figcaption>Figure 4. Screen LabVIEW to controlled position and proof signals.</figcaption>
+  </figure>
+</center>

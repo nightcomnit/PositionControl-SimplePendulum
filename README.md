@@ -65,3 +65,12 @@ When the position control and test signals were performed on the LabVIEW Screen,
 7. Start test signals (Step, Sine Wave).
 
 The same idea was carried out in Python with the nifpga-python library, for this it is required to generate a .lvbitx file of the main program to perform the same functions as the Screen but in the Python terminal. The [Simple Pendulum - Python project](../master/Simple-Pendulum-Python/) when running the [main](../master/Simple-Pendulum-Python/Main/Main.py) file shows the following in the terminal:
+```sh
+Wave-Functions to simple pendulum
+	1 - Sinusoidal Signal
+	2 - Square Signal
+	3 - Step Signal
+	4 - Calibration Mode
+	5 - Exit
+Insert the number of the function to be tested:
+```

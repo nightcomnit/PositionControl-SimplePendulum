@@ -72,5 +72,6 @@ Wave-Functions to simple pendulum
 	3 - Step Signal
 	4 - Calibration Mode
 	5 - Exit
+	
 Insert the number of the function to be tested:
 ```

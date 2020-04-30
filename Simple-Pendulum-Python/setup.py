@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='Simple Pendulum - Python',
     version='1.1',
-    install_requires=['nifpga'],
+    install_requires=['nifpga','matplotlib','numpy'],
     packages=['Calibration', 'ProofSignals'],
     url="https://github.com/nightcomnit/PositionControl-SimplePendulum",
     license='MIT',
